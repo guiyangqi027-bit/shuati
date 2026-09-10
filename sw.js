@@ -1,5 +1,5 @@
 /* 刷题本 离线缓存：联网时取最新，断网时用缓存 */
-var CACHE = 'shuati-cache-v1';
+var CACHE = 'shuati-cache-v2';
 var ASSETS = ['./', './index.html', './manifest.webmanifest', './icon-180.png', './icon-192.png', './icon-512.png'];
 self.addEventListener('install', function (e) {
   e.waitUntil(caches.open(CACHE).then(function (c) { return c.addAll(ASSETS); }).then(function () { return self.skipWaiting(); }));
